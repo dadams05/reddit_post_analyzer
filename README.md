@@ -15,13 +15,10 @@ This is a simple Python script that will analyze a Reddit post using Ollama.
   2. Select "script" as the application type
   3. Copy your `CLIENT ID` and `CLIENT SECRET`
   4. More info: https://www.reddit.com/r/reddit.com/wiki/api/
-- Ollama will need to be installed and running. This script uses the following models, so unless you change it to use others, you must
-also download these models:
+- [Ollama](https://ollama.com/) will need to be installed and running. This script uses the following models, so unless you change it to use others, you must also download these models:
    - `llama3:8b` for overall analysis
    - `qwen3-vl:4b` for image analysis
-- When installing the `requirements.txt` file, it is also important to note you may need a different version of `pytorch`. By default,
-the `requirements.txt` will install `pytorch` for `Windows` and `CUDA 13.0+`. The version of `pytorch` you need to use can be figured out
-here: [PyTorch](https://pytorch.org/get-started/locally/)
+- When installing the `requirements.txt` file, it is also important to note you may need a different version of `pytorch`. By default, the `requirements.txt` will install `pytorch` for `Windows` and `CUDA 13.0+`. The version of `pytorch` you need to use can be figured out at [PyTorch](https://pytorch.org/get-started/locally/). You can check your CUDA version with `nvidia-smi`.
 
 ## Usage
 
