@@ -132,7 +132,7 @@ if __name__ == "__main__":
     # get all comments from the post and filter them
     print(">> Downloading and filtering comments")
     comment_count = 0
-    submission.comments.replace_more(limit=None)
+    submission.comments.replace_more(limit=NUM_COMMENTS_REPLACE)
     for comment in submission.comments.list():
         comment_data = {}
         if (comment.body and
@@ -189,7 +189,7 @@ Comments on post:
     response = chat(model=ANALYZER_MODEL, messages=[{"role": "user", "content": f"{prompt}"}])
 
     # save the data
-    print(f">> Saving data out to {os.path.join(OUT_DIRECTORY, submission_id, FILE_NAME, ".json")}")
+    print(f">> Saving data out to \"{os.path.join(OUT_DIRECTORY, submission_id, f"{FILE_NAME}.json")}\"")
     data["prompt"] = prompt
     data["analysis"] = response.message.content
     with open(os.path.join(OUT_DIRECTORY, submission_id, f"{FILE_NAME}.json"), "w", encoding="utf-8") as file:
